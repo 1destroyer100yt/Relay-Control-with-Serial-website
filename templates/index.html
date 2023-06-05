@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relay Control</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function toggleRelay(state) {
+            $.get('/control/' + state);
+        }
+    </script>
+</head>
+<body>
+    <h1>Relay Control</h1>
+    <button onclick="toggleRelay('on')">Turn On</button>
+    <button onclick="toggleRelay('off')">Turn Off</button>
+</body>
+</html>
